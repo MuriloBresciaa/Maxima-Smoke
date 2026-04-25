@@ -7,8 +7,8 @@ interface Props {
 }
 
 const {
-  title = 'Impulso Digital — Site Factory',
-  description = 'Crie sites de alta conversão com a velocidade de uma fábrica. Landing pages profissionais, otimizadas para SEO e mobile-first.',
+  title = 'Máxima Smoke — A Melhor Tabacaria do Cambuí, Agora Online',
+  description = 'Tabacaria premium em Campinas/SP. Sedas, tabaco, narguile, essências e acessórios das melhores marcas com entrega para todo o Brasil via Correios.',
 } = Astro.props;
 ---
 <!DOCTYPE html>
@@ -17,12 +17,20 @@ const {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#09090b" />
+    <meta name="theme-color" content="#090a0b" />
+    <meta name="robots" content="index, follow" />
 
     <!-- Open Graph -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Máxima Smoke" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
 
     <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -40,10 +48,12 @@ const {
       html {
         font-family: 'Inter', system-ui, -apple-system, sans-serif;
         scroll-behavior: smooth;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
       }
     </style>
   </head>
-  <body class="min-h-screen antialiased">
+  <body class="min-h-screen antialiased overflow-x-hidden">
     <slot />
   </body>
 </html>

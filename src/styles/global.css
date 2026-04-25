@@ -4,11 +4,11 @@
 
 /*
  * ============================================================
- * SHADCN/UI DESIGN TOKENS — New York · Zinc · CSS Variables
+ * MÁXIMA SMOKE — Design Tokens
+ * Shadcn/ui · New York · Dark-Only · Neon Emerald Accent
  * ============================================================
- * These CSS custom properties power every Shadcn component.
- * Light mode is defined on :root, dark mode on .dark.
- * HSL format without the hsl() wrapper for Tailwind v4 compat.
+ * Premium smoke shop aesthetic: zinc-950 base with emerald neon
+ * accents for a high-conversion, underground/industrial vibe.
  * ============================================================
  */
 
@@ -45,83 +45,63 @@
   --color-sidebar-accent-foreground: hsl(var(--sidebar-accent-foreground));
   --color-sidebar-border: hsl(var(--sidebar-border));
   --color-sidebar-ring: hsl(var(--sidebar-ring));
+
+  /* Máxima Smoke — Brand Colors */
+  --color-neon: hsl(var(--neon));
+  --color-neon-muted: hsl(var(--neon-muted));
+  --color-smoke-surface: hsl(var(--smoke-surface));
+
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
 }
 
-/* ── Light Theme ── */
-:root {
-  --background: 0 0% 100%;
-  --foreground: 240 10% 3.9%;
-  --card: 0 0% 100%;
-  --card-foreground: 240 10% 3.9%;
-  --popover: 0 0% 100%;
-  --popover-foreground: 240 10% 3.9%;
-  --primary: 240 5.9% 10%;
-  --primary-foreground: 0 0% 98%;
-  --secondary: 240 4.8% 95.9%;
-  --secondary-foreground: 240 5.9% 10%;
-  --muted: 240 4.8% 95.9%;
-  --muted-foreground: 240 3.8% 46.1%;
-  --accent: 240 4.8% 95.9%;
-  --accent-foreground: 240 5.9% 10%;
-  --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 0 0% 98%;
-  --border: 240 5.9% 90%;
-  --input: 240 5.9% 90%;
-  --ring: 240 5.9% 10%;
-  --radius: 0.5rem;
-  --chart-1: 12 76% 61%;
+/* ── Dark Theme (ONLY theme — Máxima Smoke is dark-only) ── */
+:root,
+.dark {
+  --background: 240 6% 4%;
+  --foreground: 0 0% 95%;
+  --card: 240 5% 7%;
+  --card-foreground: 0 0% 95%;
+  --popover: 240 5% 7%;
+  --popover-foreground: 0 0% 95%;
+  --primary: 160 84% 39%;
+  --primary-foreground: 0 0% 2%;
+  --secondary: 240 4% 14%;
+  --secondary-foreground: 0 0% 95%;
+  --muted: 240 4% 14%;
+  --muted-foreground: 240 5% 55%;
+  --accent: 160 84% 39%;
+  --accent-foreground: 0 0% 2%;
+  --destructive: 0 63% 31%;
+  --destructive-foreground: 0 0% 95%;
+  --border: 240 4% 14%;
+  --input: 240 4% 16%;
+  --ring: 160 84% 39%;
+  --radius: 0.625rem;
+
+  /* Charts */
+  --chart-1: 160 84% 39%;
   --chart-2: 173 58% 39%;
   --chart-3: 197 37% 24%;
   --chart-4: 43 74% 66%;
   --chart-5: 27 87% 67%;
-  --sidebar-background: 0 0% 98%;
-  --sidebar-foreground: 240 5.3% 26.1%;
-  --sidebar-primary: 240 5.9% 10%;
-  --sidebar-primary-foreground: 0 0% 98%;
-  --sidebar-accent: 240 4.8% 95.9%;
-  --sidebar-accent-foreground: 240 5.9% 10%;
-  --sidebar-border: 220 13% 91%;
-  --sidebar-ring: 217.2 91.2% 59.8%;
-}
 
-/* ── Dark Theme (default) ── */
-.dark {
-  --background: 240 10% 3.9%;
-  --foreground: 0 0% 98%;
-  --card: 240 10% 3.9%;
-  --card-foreground: 0 0% 98%;
-  --popover: 240 10% 3.9%;
-  --popover-foreground: 0 0% 98%;
-  --primary: 0 0% 98%;
-  --primary-foreground: 240 5.9% 10%;
-  --secondary: 240 3.7% 15.9%;
-  --secondary-foreground: 0 0% 98%;
-  --muted: 240 3.7% 15.9%;
-  --muted-foreground: 240 5% 64.9%;
-  --accent: 240 3.7% 15.9%;
-  --accent-foreground: 0 0% 98%;
-  --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 0 0% 98%;
-  --border: 240 3.7% 15.9%;
-  --input: 240 3.7% 15.9%;
-  --ring: 240 4.9% 83.9%;
-  --chart-1: 220 70% 50%;
-  --chart-2: 160 60% 45%;
-  --chart-3: 30 80% 55%;
-  --chart-4: 280 65% 60%;
-  --chart-5: 340 75% 55%;
-  --sidebar-background: 240 5.9% 10%;
-  --sidebar-foreground: 240 4.8% 95.9%;
-  --sidebar-primary: 224.3 76.3% 48%;
-  --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 240 3.7% 15.9%;
-  --sidebar-accent-foreground: 240 4.8% 95.9%;
-  --sidebar-border: 240 3.7% 15.9%;
-  --sidebar-ring: 217.2 91.2% 59.8%;
+  /* Sidebar */
+  --sidebar-background: 240 6% 6%;
+  --sidebar-foreground: 0 0% 95%;
+  --sidebar-primary: 160 84% 39%;
+  --sidebar-primary-foreground: 0 0% 2%;
+  --sidebar-accent: 240 4% 14%;
+  --sidebar-accent-foreground: 0 0% 95%;
+  --sidebar-border: 240 4% 14%;
+  --sidebar-ring: 160 84% 39%;
+
+  /* Máxima Smoke — Extended Brand Tokens */
+  --neon: 160 84% 39%;
+  --neon-muted: 160 40% 20%;
+  --smoke-surface: 240 5% 10%;
 }
 
 /* ── Global Reset ── */
@@ -132,4 +112,57 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* ── Máxima Smoke — Custom Utilities ── */
+@layer utilities {
+  .neon-glow {
+    box-shadow: 0 0 20px hsl(160 84% 39% / 0.25),
+                0 0 60px hsl(160 84% 39% / 0.1);
+  }
+  .neon-glow-strong {
+    box-shadow: 0 0 30px hsl(160 84% 39% / 0.4),
+                0 0 80px hsl(160 84% 39% / 0.15);
+  }
+  .neon-text-glow {
+    text-shadow: 0 0 20px hsl(160 84% 39% / 0.5),
+                 0 0 40px hsl(160 84% 39% / 0.2);
+  }
+  .smoke-gradient {
+    background: linear-gradient(180deg, hsl(240 6% 4%) 0%, hsl(240 5% 10%) 100%);
+  }
+  .smoke-gradient-radial {
+    background: radial-gradient(ellipse at 50% 0%, hsl(160 84% 39% / 0.06) 0%, transparent 60%);
+  }
+}
+
+/* ── Smoke Particle Animation ── */
+@keyframes smoke-float {
+  0%, 100% { transform: translateY(0) translateX(0) scale(1); opacity: 0; }
+  10% { opacity: 0.3; }
+  50% { transform: translateY(-120px) translateX(30px) scale(1.5); opacity: 0.15; }
+  90% { opacity: 0; }
+  100% { transform: translateY(-200px) translateX(-20px) scale(2); }
+}
+
+@keyframes neon-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes float-up {
+  0% { transform: translateY(40px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.animate-smoke-float {
+  animation: smoke-float 8s ease-in-out infinite;
+}
+
+.animate-neon-pulse {
+  animation: neon-pulse 3s ease-in-out infinite;
+}
+
+.animate-float-up {
+  animation: float-up 0.8s ease-out forwards;
 }

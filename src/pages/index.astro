@@ -1,10 +1,22 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import HeroCapture from '../components/sections/HeroCapture';
+import HeroMaxima from '../components/sections/HeroMaxima';
+import ProductGrid from '../components/sections/ProductGrid';
+import CartWidget from '../components/ui/CartWidget';
+import { fetchActiveProducts } from '../lib/supabase';
+import type { Product } from '../lib/supabase';
+
+// Fetch products at build time (SSG) — runs on the server, zero client JS cost.
+// Falls back to an empty array if Supabase is unreachable.
+const products: Product[] = await fetchActiveProducts();
 ---
 
 <Layout>
   <main>
-    <HeroCapture client:load />
+    <HeroMaxima client:load />
+    <ProductGrid initialProducts={products} client:load />
   </main>
+
+  {/* CartWidget renders outside <main> so it floats over all sections */}
+  <CartWidget client:load />
 </Layout>
